@@ -66,7 +66,7 @@ post-down iptables -t nat -D POSTROUTING -s '192.168.10.0/24' -o eth0 -j MASQUER
 
 - Переходим в директорию storage (local) по умолчанию ```cd /var/lib/vz/template/iso```
 
-- Скачиваем cloud-init образ ОС ```http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img```
+- Скачиваем cloud-init образ ОС ```wget http://cloud-images.ubuntu.com/releases/focal/release/ubuntu-20.04-server-cloudimg-amd64.img```
 
 - Далее нам необходимо скачать прикладное ПО, которое может кастомизировать наш скачанный img ```sudo apt install libguestfs-tools -y```
 
@@ -97,20 +97,20 @@ qm create 9001 \
 
 3. В веб-интерфейсе Proxmox необходимо:
 
-- Создать API ключ для создания ВМ через Terraform
+- Создать API ключ для создания ВМ для Terraform
 ![Image 1](https://raw.githubusercontent.com/staybox/hl-linux-2022-HW9/main/screenshots/proxmox_storage_perm.jpg)
 
-- Добавить права доступа в разделе ```permissions``` для storage через API
+- Добавить права доступа в разделе ```permissions``` для storage для доступа через API
 ![Image 2](https://raw.githubusercontent.com/staybox/hl-linux-2022-HW9/main/screenshots/proxmox_api.jpg)
 
-После разворачивания ВМ (на моем примере у меня две ВМ) картина буде приблизительно следующей:
+После разворачивания ВМ (в моем примере у меня две ВМ) картина буде приблизительно следующей:
 ![Image 3](https://raw.githubusercontent.com/staybox/hl-linux-2022-HW9/main/screenshots/proxmox_result.jpg)
 
 ## Запуск
 
 1. Скачать и установить Terraform, Git
 
-2. Сгенерировать открытый и закрытый ключ для ВМ командой ```ssh-keygen```
+2. Сгенерировать открытый и закрытый ключ для будущих гостевых ВМ командой ```ssh-keygen```
 
 3. Склонировать репозиторий ```git clone https://github.com/staybox/hl-linux-2022-HW9.git```
 
