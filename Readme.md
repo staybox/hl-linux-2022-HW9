@@ -121,3 +121,13 @@ qm create 9001 \
 6. Выполнить команду ```terraform apply```. Перед использование команды ```terraform apply```, рекомендуется использовать ```terraform plan```
 
 Команда для более быстрой подготовки к запуску: ```mkdir hl-linux-2022-HW9 && cd hl-linux-2022-HW9 && git clone https://github.com/staybox/hl-linux-2022-HW9.git && terraform init && terraform validate```
+
+Использованная документация:
+- https://codingpackets.com/blog/proxmox-import-and-use-cloud-images/
+- https://codingpackets.com/blog/proxmox-provision-guests-with-terraform/
+- https://programmer.ink/think/deploy-proxmox-virtual-machine-using-terraform.html
+- https://austinsnerdythings.com/2021/08/30/how-to-create-a-proxmox-ubuntu-cloud-init-image/
+- https://austinsnerdythings.com/2021/09/01/how-to-deploy-vms-in-proxmox-with-terraform/
+- https://vectops.com/2020/05/provision-proxmox-vms-with-terraform-quick-and-easy/
+- https://pve.proxmox.com/wiki/Cloud-Init_Support
+- https://pve.proxmox.com/wiki/Network_Configuration
